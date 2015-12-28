@@ -51,6 +51,11 @@ openssl dhparam -out /etc/openvpn/dh1024.pem 1024
 
 - Copy các certificate và key vừa tạo vào /etc/openvpn
 ```sh
+cp /etc/openvpn/easy-rsa/keys/{server.crt,server.key,ca.crt} /etc/openvpn
+```
+
+- Tạo certificate và key cho client
+```sh
 ./build-key client1
 ```
 - Sửa file /etc/openvpn/server.conf
